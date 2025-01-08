@@ -29,5 +29,5 @@ const funcionNavegarASnivy = () =>{
         })}
   </div>
     }
-export default PokeLista
+export default PokeLista;
 
