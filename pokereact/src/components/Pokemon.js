@@ -70,6 +70,24 @@ const Pokemon = (props) => {
         return baseDefense + (nivel * 2)
     }
 
+    const funcionNavegar = (p) =>{
+        //navigate("/pokemon/" +p)
+        Navigate(`/pokemon/${p}`)
+    }
+
+    return <div>
+        <button onClick={funcionNavegarASnivy}>Navega a Snivy</button>
+        <Link to="/pokemon/25">Ir a PIKACHU</Link>
+        <h1>Lista</h1>
+        {pokemons.map(p =>{
+            return <><p>
+                Este pokemon es {p.name}
+                </p>
+                <div onClick={()=>{navigate("/pokemon/" + p.name)}}>Navegar</div>
+                <Link to={"pokemon/"+p.name}>Navegar</Link>
+            </>
+        })}
+    </div>
     return <div>
         <img src={imgFrontUrl}></img>
         <img src={imgBackUrl}></img>
